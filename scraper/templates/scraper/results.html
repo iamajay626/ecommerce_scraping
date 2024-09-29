@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scraped Products</title>
+  </head>
+  <body>
+    <h1>Scraped Products</h1>
+    <table border="1">
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Selling Status</th>
+        <th>Condition</th>
+      </tr>
+      {% for product in products %}
+      <tr>
+        <td>{{ product.title }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.selling_status }}</td>
+        <td>{{ product.condition }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="/">Back</a>
+  </body>
+</html>
